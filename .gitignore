@@ -1,10 +1,13 @@
-requirment.md
-task.odt
-task.pdf
+# HTML files in root
+/*.html
 
-*.html
-*.svg
-*.md
+# Root level files
+/requirment.md
+/skill section.html
+/task.odt
+/task.pdf
+/favicon.svg
 
-.kiro
-.vscode
+# IDE and config folders
+/.kiro
+/.vscode
