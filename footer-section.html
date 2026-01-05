@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Footer Section</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#29332C",
+                        "secondary": "#BDB284",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased min-h-screen flex flex-col">
+<div class="flex-grow flex items-center justify-center p-10">
+<div class="text-center space-y-4">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Developer Portfolio</h1>
+<p class="text-gray-500 dark:text-gray-400">Scroll down to view the footer component.</p>
+<div class="h-64 w-full bg-gradient-to-b from-transparent to-background-light dark:to-background-dark opacity-20"></div>
+</div>
+</div>
+<footer class="w-full bg-primary text-white relative mt-12">
+<div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+<a aria-label="Back to top" class="group flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary" href="#">
+<span class="material-symbols-outlined text-2xl group-hover:animate-bounce">arrow_upward</span>
+</a>
+</div>
+<div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+<div class="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-20">
+<div class="max-w-sm">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-primary">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<span class="text-2xl font-bold tracking-tight text-white">DevName</span>
+</div>
+<p class="mt-6 text-base leading-7 text-gray-300">
+                        Building digital experiences with code and creativity. Specialized in modern web technologies and user-centric design.
+                    </p>
+<div class="mt-8">
+<h4 class="text-sm font-semibold text-secondary uppercase tracking-wider mb-4">Subscribe to newsletter</h4>
+<form class="flex gap-2">
+<input class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6" placeholder="Enter your email" type="email"/>
+<button class="flex-none rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition-colors" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="flex flex-wrap gap-10 sm:gap-16">
+<div class="flex flex-col gap-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-secondary">Menu</h3>
+<a class="text-base text-gray-300 transition-colors hover:text-secondary hover:translate-x-1 duration-200" href="#">Home</a>
+<a class="text-base text-gray-300 transition-colors hover:text-secondary hover:translate-x-1 duration-200" href="#">About</a>
+<a class="text-base text-gray-300 transition-colors hover:text-secondary hover:translate-x-1 duration-200" href="#">Projects</a>
+<a class="text-base text-gray-300 transition-colors hover:text-secondary hover:translate-x-1 duration-200" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-secondary">Resources</h3>
+<a class="text-base text-gray-300 transition-colors hover:text-secondary hover:translate-x-1 duration-200" href="#">Resume</a>
+<a class="text-base text-gray-300 transition-colors hover:text-secondary hover:translate-x-1 duration-200" href="#">Blog</a>
+<a class="text-base text-gray-300 transition-colors hover:text-secondary hover:translate-x-1 duration-200" href="#">Snippets</a>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-secondary">Connect</h3>
+<div class="flex gap-3">
+<a aria-label="GitHub" class="group flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition-all hover:bg-secondary hover:text-primary text-gray-300" href="#">
+<span class="material-symbols-outlined text-xl">code</span>
+</a>
+<a aria-label="LinkedIn" class="group flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition-all hover:bg-secondary hover:text-primary text-gray-300" href="#">
+<span class="material-symbols-outlined text-xl">person_add</span>
+</a>
+<a aria-label="Twitter" class="group flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition-all hover:bg-secondary hover:text-primary text-gray-300" href="#">
+<span class="material-symbols-outlined text-xl">flutter_dash</span>
+</a>
+<a aria-label="Email" class="group flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition-all hover:bg-secondary hover:text-primary text-gray-300" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+<div class="mt-2 text-sm text-gray-400">
+<p>Available for freelance work.</p>
+<a class="text-secondary hover:underline underline-offset-4 decoration-secondary" href="#">Hire me →</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+<p class="text-sm text-gray-400 text-center sm:text-left">
+                    © 2024 Developer Name. All Rights Reserved.
+                </p>
+<div class="flex items-center gap-6">
+<a class="text-sm text-gray-400 hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-400 hover:text-secondary transition-colors" href="#">Terms of Service</a>
+</div>
+<p class="text-sm text-gray-400 flex items-center gap-1">
+                    Designed &amp; Built with <span class="material-symbols-outlined text-sm text-secondary fill-current">favorite</span> by DevName
+                </p>
+</div>
+</div>
+</footer>
+
+</body></html>

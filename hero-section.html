@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#29332C",
+                        "secondary": "#BDB284",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#181a19", // Very dark grey, almost black for contrast with primary green
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #181a19; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #29332c; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #BDB284; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-white overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e5e7eb] dark:border-b-[#2f3130] bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-3 sm:px-10">
+<div class="flex items-center gap-3 text-primary dark:text-white">
+<div class="size-8 flex items-center justify-center rounded-lg bg-primary text-secondary">
+<span class="material-symbols-outlined" style="font-size: 24px;">code</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">DevPortfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium leading-normal text-primary/70 hover:text-primary dark:text-[#9eaebc] dark:hover:text-secondary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-primary/70 hover:text-primary dark:text-[#9eaebc] dark:hover:text-secondary transition-colors" href="#">About</a>
+<a class="text-sm font-medium leading-normal text-primary/70 hover:text-primary dark:text-[#9eaebc] dark:hover:text-secondary transition-colors" href="#">Projects</a>
+<a class="text-sm font-medium leading-normal text-primary/70 hover:text-primary dark:text-[#9eaebc] dark:hover:text-secondary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-secondary border border-transparent hover:bg-primary/90 transition-all text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Hire Me</span>
+</button>
+<button class="md:hidden text-primary dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative flex flex-col items-center justify-center px-4 py-12 md:py-24 lg:py-32 bg-background-light dark:bg-[#1f2621]">
+<div class="absolute top-0 right-0 -mt-20 -mr-20 h-[500px] w-[500px] rounded-full bg-secondary/10 blur-[100px]"></div>
+<div class="absolute bottom-0 left-0 -mb-20 -ml-20 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[80px]"></div>
+<div class="layout-content-container z-10 flex flex-col max-w-[1200px] w-full gap-12 lg:flex-row lg:items-center lg:justify-between">
+<div class="flex flex-col gap-6 lg:max-w-[600px] text-center lg:text-left order-2 lg:order-1">
+<div class="flex flex-col gap-4 items-center lg:items-start">
+<div class="px-3 py-1 bg-secondary/20 rounded-full w-fit">
+<span class="text-primary dark:text-secondary font-bold tracking-widest uppercase text-xs animate-fade-in-up">Software Engineer</span>
+</div>
+<h1 class="text-4xl font-black leading-tight tracking-[-0.033em] text-primary dark:text-white sm:text-5xl md:text-6xl">
+                                Hello, I'm <span class="text-secondary dark:text-secondary">Alex Developer</span>
+</h1>
+<h2 class="text-lg font-normal leading-relaxed text-primary/80 dark:text-[#d1d5db]">
+                                Creative Frontend Developer &amp; UI Specialist. I build accessible, pixel-perfect, and performant web experiences using modern frameworks like React, Vue, and Tailwind CSS.
+                            </h2>
+</div>
+<div class="flex flex-col gap-8 mt-4">
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-secondary hover:bg-primary/90 transition-colors text-base font-bold leading-normal tracking-[0.015em] shadow-xl shadow-primary/10">
+<span class="material-symbols-outlined" style="font-size: 20px;">download</span>
+<span class="truncate">Download Resume</span>
+</button>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 border border-primary/20 dark:border-[#3e4842] bg-transparent text-primary dark:text-white hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-base font-medium leading-normal">
+<span>View Projects</span>
+</button>
+</div>
+<div class="flex items-center justify-center lg:justify-start gap-4">
+<a class="group flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-[#2f3130] border border-[#e5e7eb] dark:border-[#3e4842] hover:border-primary dark:hover:border-secondary transition-all shadow-sm" href="#">
+<img alt="GitHub" class="w-6 h-6 dark:invert group-hover:scale-110 transition-transform" data-alt="Github logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQFCOJbs_Yfh5n_h_Ut0_MhzliF4A63alCPcpkClKm8fdKKpwMnll15tlEnjVDUA71OXgvW--ZOy3g-NAdaou8wh8lFa5DNe2xFz9C4H4BsMrUENeCBS1ci_vpZUmotz-CTiVfxb_6IcxhFYd4I4NVvgHrZqjWzknHjvVNWCseIXgo8wmxJ7WQgkKXULCM9PjxbeRGXuNnRkiqK7I-irEyGViIcfZqBG73X1Q9hxF96ti_9Q3WpTaIHOD3IqUArMamxybUymLYoPI"/>
+</a>
+<a class="group flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-[#2f3130] border border-[#e5e7eb] dark:border-[#3e4842] hover:border-primary dark:hover:border-secondary transition-all shadow-sm" href="#">
+<img alt="LinkedIn" class="w-6 h-6 group-hover:scale-110 transition-transform" data-alt="LinkedIn logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdF24QR4SvWinivj_gqD2wdFDlBaWuZqulGvh2_nhuthyaYAXrR9ZuqpFWCZ8D1dQ4Bsf8SYRvTtrhFcW_ZsPmsbvEEjGxJ6tynwxwKTE5bSAfJQTg3dAG2Jn5J8dzMTZ9zN_DAgGHdl_9ILCPLC5z5Wd6wxvUmY2NG7WTKoaVjuxkrDTq4EoinlSIkk56Dfi3kMSRaP0ThBvgcDA6YopuX2-Tv9ukGkE__vAx9isizogp_ZLPN3KzYnB6MsD62EZFkHmfdSBTWuk"/>
+</a>
+<a class="group flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-[#2f3130] border border-[#e5e7eb] dark:border-[#3e4842] hover:border-primary dark:hover:border-secondary transition-all shadow-sm" href="#">
+<img alt="Twitter" class="w-6 h-6 group-hover:scale-110 transition-transform" data-alt="Twitter logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJA63AJtTFfRMBOwhoTSaqo2eIKrxbvObzUCUj6IQ_HuVR6pE9cGccu1w6NB4GHv3E3n-IL6cPitIinM7A69pYJZRBLgUuR2VpF7wq_yZWw0LnbhlXK_HCMQjoB9CMoFx9snPcqhH57Q_7xnb5Ym6qvkRvmiYQeuvtWCXUBsxUyccu7mU4KipBYbbknjHa2gI-zWVHtJcCWRJ_2lv5i7VnXHKi1MrgqIMsqWbXFl_9cEQ2zSqpuk4Y0FbHH1fEgNrdnq_2-VMKVNM"/>
+</a>
+<a class="group flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-[#2f3130] border border-[#e5e7eb] dark:border-[#3e4842] hover:border-primary dark:hover:border-secondary transition-all shadow-sm" href="#">
+<img alt="Facebook" class="w-6 h-6 group-hover:scale-110 transition-transform" data-alt="Facebook logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc692EOYdf8kOBTbzbbfgpsQVRHY1i_hixjsWdkjRGpJrtFQICs1B9BUP_HjSiWnRfjsLuP0XLc0HeOaZP8T0Hw2oXQf-UAhyTa9Z4FXlNsp0YZt5o8YxPva_L9aOzbB4yjyVSisitHnJqCYmbRWS8DB9IRmWpiky4y27D92v9WL2oLPALEYbVUmfAXw-s1-mR_n1Aj5jucg4aRDUJ-eQWZzQTvuORXddOdCGx2MK2zUOKJcohL5NfryE-WN8qFYkMTrZk94b3T9s"/>
+</a>
+</div>
+</div>
+</div>
+<div class="relative w-full max-w-[400px] lg:max-w-[480px] aspect-square flex justify-center items-center order-1 lg:order-2 mx-auto">
+<div class="absolute inset-0 bg-primary rounded-full blur-[2px] opacity-10 dark:opacity-20 scale-95"></div>
+<div class="absolute inset-4 border-2 border-primary/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
+<div class="relative w-full h-full rounded-full overflow-hidden border-8 border-white dark:border-[#2f3130] shadow-2xl">
+<img alt="Portrait of Alex Developer" class="w-full h-full object-cover" data-alt="Professional headshot of a developer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIEAb-Oepl58SNA5fXSowmFctTusXWIn1b1usN--cCBogL-JDCG5UOc6lWPnFbZzYthIji2NktOZATHDYch8dupNWHo7bc8Oz1hKbsUEBXDAh0oKBliSErspCFx_q1eJFp1Bq8WSzeUQln4OvtzyMcGnAfvkkDfGWvWUbVfM6ekUz8UcEfCJ8XiJcP9E3s2yCNrmt-lXm6Vps2RPFuj7UUsMoJIe2D-VEmZQgjb8O2eJJQ17CWsCPA3nIWp7BaxO2644--dNLLkaA"/>
+</div>
+<div class="absolute bottom-10 -left-4 md:left-0 bg-white dark:bg-[#2f3130] p-4 rounded-xl shadow-xl flex items-center gap-3 border border-[#e5e7eb] dark:border-[#3e4842]">
+<div class="bg-primary/10 p-2 rounded-lg text-primary dark:text-secondary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<p class="text-xs text-[#637588] dark:text-[#9eaebc] font-medium">Experience</p>
+<p class="text-sm font-bold text-primary dark:text-white">5+ Years</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="w-full bg-primary dark:bg-[#111312] border-y border-primary/20 dark:border-[#2f3130] py-8 overflow-hidden relative">
+<div class="flex gap-16 animate-marquee whitespace-nowrap justify-center flex-wrap px-4 text-white/80">
+<span class="font-semibold text-xl flex items-center gap-2"><span class="material-symbols-outlined text-secondary">html</span> HTML5</span>
+<span class="font-semibold text-xl flex items-center gap-2"><span class="material-symbols-outlined text-secondary">css</span> CSS3</span>
+<span class="font-semibold text-xl flex items-center gap-2"><span class="material-symbols-outlined text-secondary">javascript</span> JavaScript</span>
+<span class="font-semibold text-xl flex items-center gap-2"><span class="material-symbols-outlined text-secondary">code_blocks</span> React</span>
+<span class="font-semibold text-xl flex items-center gap-2"><span class="material-symbols-outlined text-secondary">data_object</span> Node.js</span>
+<span class="font-semibold text-xl flex items-center gap-2"><span class="material-symbols-outlined text-secondary">brush</span> Tailwind</span>
+</div>
+</div>
+<section class="py-16 px-4 bg-background-light dark:bg-background-dark">
+<div class="max-w-[960px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center gap-2">
+<div class="p-4 bg-primary/10 rounded-full text-primary dark:text-secondary mb-2">
+<span class="material-symbols-outlined text-3xl">folder_open</span>
+</div>
+<h3 class="text-3xl font-bold text-primary dark:text-white">50+</h3>
+<p class="text-sm text-[#637588] dark:text-[#9eaebc]">Projects Completed</p>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<div class="p-4 bg-primary/10 rounded-full text-primary dark:text-secondary mb-2">
+<span class="material-symbols-outlined text-3xl">group</span>
+</div>
+<h3 class="text-3xl font-bold text-primary dark:text-white">30+</h3>
+<p class="text-sm text-[#637588] dark:text-[#9eaebc]">Happy Clients</p>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<div class="p-4 bg-primary/10 rounded-full text-primary dark:text-secondary mb-2">
+<span class="material-symbols-outlined text-3xl">coffee</span>
+</div>
+<h3 class="text-3xl font-bold text-primary dark:text-white">1200+</h3>
+<p class="text-sm text-[#637588] dark:text-[#9eaebc]">Cups of Coffee</p>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<div class="p-4 bg-primary/10 rounded-full text-primary dark:text-secondary mb-2">
+<span class="material-symbols-outlined text-3xl">rewarded_ads</span>
+</div>
+<h3 class="text-3xl font-bold text-primary dark:text-white">12</h3>
+<p class="text-sm text-[#637588] dark:text-[#9eaebc]">Awards Won</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="flex flex-col gap-6 px-5 py-10 text-center border-t border-[#e5e7eb] dark:border-[#2f3130] bg-background-light dark:bg-[#111312]">
+<div class="flex flex-col items-center gap-4">
+<div class="flex items-center gap-2 text-primary dark:text-white mb-2">
+<span class="material-symbols-outlined text-secondary">code</span>
+<span class="font-bold">DevPortfolio</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+<a class="text-[#637588] hover:text-primary dark:text-[#a9adaa] dark:hover:text-secondary text-sm font-normal leading-normal transition-colors" href="#">Home</a>
+<a class="text-[#637588] hover:text-primary dark:text-[#a9adaa] dark:hover:text-secondary text-sm font-normal leading-normal transition-colors" href="#">About</a>
+<a class="text-[#637588] hover:text-primary dark:text-[#a9adaa] dark:hover:text-secondary text-sm font-normal leading-normal transition-colors" href="#">Projects</a>
+<a class="text-[#637588] hover:text-primary dark:text-[#a9adaa] dark:hover:text-secondary text-sm font-normal leading-normal transition-colors" href="#">Contact</a>
+</div>
+<div class="w-full max-w-[200px] h-px bg-[#e5e7eb] dark:bg-[#2f3130] my-2"></div>
+<p class="text-[#637588] dark:text-[#6b7280] text-sm font-normal leading-normal">© 2023 Alex Developer. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>
