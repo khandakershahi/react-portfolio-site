@@ -1,4 +1,4 @@
- requirment.md
+requirment.md
 task.odt
 task.pdf
 
@@ -6,3 +6,5 @@ task.pdf
 *.svg
 *.md
 
+.kiro
+.vscode
