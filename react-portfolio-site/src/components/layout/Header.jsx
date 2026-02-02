@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { FaCode, FaBars, FaTimes } from 'react-icons/fa';
 import { useTheme } from '../../contexts/ThemeContext';
 import ThemeToggle from '../ui/ThemeToggle';
@@ -7,6 +8,8 @@ import logo from '../../assets/images/favicon.svg';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDark } = useTheme();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -17,9 +20,22 @@ const Header = () => {
   ];
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // If we're not on the home page, navigate to home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation then scroll
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -29,7 +45,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className="size-8 flex items-center justify-center">
               <img src={logo} alt="Logo" className="w-full h-full" />
             </div>
@@ -41,7 +57,7 @@ const Header = () => {
                 Frontend Web Developer
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -59,7 +75,9 @@ const Header = () => {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
-            <button className="bg-primary text-secondary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors">
+            <button 
+              onClick={() => scrollToSection('#contact')}
+              className="bg-primary text-secondary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors">
               Hire Me
             </button>
           </div>
@@ -89,7 +107,9 @@ const Header = () => {
                   {item.name}
                 </button>
               ))}
-              <button className="bg-primary text-secondary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors w-fit mt-2">
+              <button 
+                onClick={() => scrollToSection('#contact')}
+                className="bg-primary text-secondary px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90 transition-colors w-fit mt-2">
                 Hire Me
               </button>
             </nav>

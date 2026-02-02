@@ -46,14 +46,14 @@ const Contact = () => {
     {
       icon: FaPhone,
       title: 'Phone',
-      value: '+880 1XXX-XXXXXX',
-      href: 'tel:+8801XXXXXXXX'
+      value: '+880 1750 400 444',
+      href: 'tel:+8801750400444'
     },
     {
       icon: FaWhatsapp,
       title: 'WhatsApp',
-      value: 'Chat directly on WhatsApp',
-      href: 'https://wa.me/8801XXXXXXXX'
+      value: '+880 1750 400 444',
+      href: 'https://wa.me/8801750400444'
     }
   ];
 

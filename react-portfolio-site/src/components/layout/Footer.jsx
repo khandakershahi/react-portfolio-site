@@ -1,4 +1,5 @@
 import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/favicon.svg';
 
 const Footer = () => {
@@ -146,12 +147,12 @@ const Footer = () => {
             © 2024 Khandaker Shahi. All Rights Reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a className="text-sm text-gray-400 hover:text-secondary transition-colors" href="#privacy">
+            <Link to="/privacy" className="text-sm text-gray-400 hover:text-secondary transition-colors">
               Privacy Policy
-            </a>
-            <a className="text-sm text-gray-400 hover:text-secondary transition-colors" href="#terms">
+            </Link>
+            <Link to="/terms" className="text-sm text-gray-400 hover:text-secondary transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
           <p className="text-sm text-gray-400 flex items-center gap-1">
             Designed & Built with <span className="text-secondary">♥</span> by Khandaker Shahi

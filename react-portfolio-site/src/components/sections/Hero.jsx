@@ -5,8 +5,7 @@ import myPhoto from '../../assets/images/my-photo-gray.jpg';
 
 const Hero = () => {
   const handleDownloadResume = () => {
-    // TODO: Implement resume download
-    console.log('Download resume clicked');
+    window.open('https://drive.google.com/file/d/1Yc1rA_xl8fx0KQbzKDlpJQMrQwl9f0tu/view?usp=sharing', '_blank');
   };
 
   const statistics = [
@@ -29,7 +28,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative flex flex-col items-center justify-center px-4 py-12 md:py-24 lg:py-32 bg-background-light dark:bg-background-dark min-h-screen">
+    <section id="home" className="relative flex flex-col items-center justify-center px-4 py-12 md:py-24 lg:py-32 bg-background-light dark:bg-background-dark min-h-screen overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 -mt-20 -mr-20 h-[500px] w-[500px] rounded-full bg-secondary/10 blur-[100px]"></div>
       <div className="absolute bottom-0 left-0 -mb-20 -ml-20 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[80px]"></div>
@@ -61,7 +60,11 @@ const Hero = () => {
                 <FaDownload size={20} />
                 <span className="truncate">Download Resume</span>
               </button>
-              <button className="flex min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 border border-primary/20 dark:border-gray-600 bg-transparent text-primary dark:text-white hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-base font-medium leading-normal">
+              <button 
+                onClick={() => {
+                  document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="flex min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 border border-primary/20 dark:border-gray-600 bg-transparent text-primary dark:text-white hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-base font-medium leading-normal">
                 <span>View Projects</span>
               </button>
             </div>
