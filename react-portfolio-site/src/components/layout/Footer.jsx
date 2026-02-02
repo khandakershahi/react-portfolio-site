@@ -1,25 +1,10 @@
-import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/favicon.svg';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className="w-full bg-primary text-white relative mt-12">
-      {/* Back to top button */}
-      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-        <button
-          onClick={scrollToTop}
-          className="group flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-primary shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary"
-          aria-label="Back to top"
-        >
-          <FaArrowUp className="text-xl group-hover:animate-bounce" />
-        </button>
-      </div>
-
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-20">
           {/* Brand and Description */}

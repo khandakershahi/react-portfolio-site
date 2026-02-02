@@ -25,11 +25,50 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // TODO: Implement actual email sending
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate API call
+      const brevoApiKey = import.meta.env.VITE_BREVO_API_KEY;
+      const fromEmail = import.meta.env.VITE_BREVO_FROM_EMAIL || 'hello@khandakershahi.com';
+      const toEmail = import.meta.env.VITE_BREVO_TO_EMAIL || 'hello@khandakershahi.com';
+
+      if (!brevoApiKey) {
+        throw new Error('Brevo API key not configured');
+      }
+
+      const emailData = {
+        sender: { name: 'Portfolio Contact', email: fromEmail },
+        to: [{ email: toEmail }],
+        replyTo: { email: formData.email, name: formData.name },
+        subject: `[Portfolio] ${formData.subject}`,
+        htmlContent: `
+          <div style="font-family:Arial,sans-serif;line-height:1.6">
+            <p><strong>Name:</strong> ${formData.name}</p>
+            <p><strong>Email:</strong> ${formData.email}</p>
+            <p><strong>Subject:</strong> ${formData.subject}</p>
+            <p><strong>Message:</strong></p>
+            <p>${formData.message.replace(/\n/g, '<br/>')}</p>
+          </div>
+        `,
+        textContent: `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\n${formData.message}`
+      };
+
+      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'accept': 'application/json',
+          'api-key': brevoApiKey,
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(emailData)
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to send message');
+      }
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: 'Project Inquiry', message: '' });
     } catch (error) {
+      console.error('Email send error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

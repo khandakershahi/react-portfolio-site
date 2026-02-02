@@ -115,9 +115,9 @@ const Hero = () => {
 
       {/* Technology Marquee */}
       <div className="w-full bg-primary dark:bg-gray-900 border-y border-primary/20 dark:border-gray-700 py-8 overflow-hidden relative mt-16">
-        <div className="flex gap-16 animate-marquee whitespace-nowrap justify-center flex-wrap px-4 text-white/80">
+        <div className="flex gap-16 animate-marquee whitespace-nowrap px-4 text-white/80">
           {technologies.map((tech, index) => (
-            <span key={index} className="font-semibold text-xl flex items-center gap-2">
+            <span key={index} className="font-semibold text-xl flex items-center gap-2 flex-shrink-0">
               <tech.icon className="text-secondary" />
               {tech.name}
             </span>
