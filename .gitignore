@@ -11,3 +11,6 @@
 # IDE and config folders
 /.kiro
 /.vscode
+
+# Local Netlify folder
+.netlify

@@ -1,4 +1,4 @@
-import { FaDownload, FaGithub, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaDownload, FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import { SiHtml5, SiCss3, SiJavascript, SiReact, SiNextdotjs, SiTailwindcss, SiWordpress, SiPhp, SiMysql, SiExpress, SiMongodb } from 'react-icons/si';
 import myPhoto from '../../assets/images/my-photo-gray.jpg';
 
@@ -74,8 +74,7 @@ const Hero = () => {
               {[
                 { icon: FaGithub, href: 'https://github.com/khandakershahi', label: 'GitHub' },
                 { icon: FaLinkedin, href: 'https://linkedin.com/in/khandakershahi', label: 'LinkedIn' },
-                { icon: FaTwitter, href: 'https://twitter.com/khandakershahi', label: 'Twitter' },
-                { icon: FaFacebook, href: 'https://facebook.com/khandakershahi', label: 'Facebook' }
+                { icon: FaFacebook, href: 'https://www.facebook.com/KhandakerShahiOfficial', label: 'Facebook' }
               ].map((social, index) => (
                 <a
                   key={index}

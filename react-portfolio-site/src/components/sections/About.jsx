@@ -187,10 +187,16 @@ const About = () => {
               <p className="text-gray-600 dark:text-gray-400 mt-1">Check out my projects or get in touch.</p>
             </div>
             <div className="flex gap-4">
-              <button className="border border-secondary text-secondary px-6 py-2 rounded-lg text-sm font-bold hover:bg-secondary hover:text-primary transition-colors">
+              <button 
+                onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="border border-secondary text-secondary px-6 py-2 rounded-lg text-sm font-bold hover:bg-secondary hover:text-primary transition-colors"
+              >
                 View Projects
               </button>
-              <button className="bg-secondary text-primary px-6 py-2 rounded-lg text-sm font-bold hover:bg-secondary/80 transition-colors">
+              <button 
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-secondary text-primary px-6 py-2 rounded-lg text-sm font-bold hover:bg-secondary/80 transition-colors"
+              >
                 Contact Me
               </button>
             </div>

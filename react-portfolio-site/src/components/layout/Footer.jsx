@@ -1,8 +1,56 @@
-import { FaCode, FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaCode, FaGithub, FaLinkedin, FaFacebook, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/favicon.svg';
 
 const Footer = () => {
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState(null);
+  const [isSubscribing, setIsSubscribing] = useState(false);
+
+  const handleNewsletterSubscribe = async (e) => {
+    e.preventDefault();
+    
+    if (!newsletterEmail) return;
+
+    setIsSubscribing(true);
+    setNewsletterStatus(null);
+
+    try {
+      const brevoApiKey = import.meta.env.VITE_BREVO_API_KEY;
+      const brevoListId = import.meta.env.VITE_BREVO_NEWSLETTER_LIST_ID;
+
+      if (!brevoApiKey || !brevoListId) {
+        throw new Error('Brevo configuration missing');
+      }
+
+      const response = await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: {
+          'accept': 'application/json',
+          'api-key': brevoApiKey,
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: newsletterEmail,
+          listIds: [parseInt(brevoListId)]
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to subscribe');
+      }
+
+      setNewsletterStatus('success');
+      setNewsletterEmail('');
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      setNewsletterStatus('error');
+    } finally {
+      setIsSubscribing(false);
+    }
+  };
   return (
     <footer className="w-full bg-primary text-white relative mt-12">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
@@ -31,18 +79,30 @@ const Footer = () => {
               <h4 className="text-sm font-semibold text-secondary uppercase tracking-wider mb-4">
                 Subscribe to newsletter
               </h4>
-              <form className="flex gap-2">
-                <input
-                  className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
-                  placeholder="Enter your email"
-                  type="email"
-                />
-                <button
-                  className="flex-none rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition-colors"
-                  type="submit"
-                >
-                  Subscribe
-                </button>
+              <form onSubmit={handleNewsletterSubscribe} className="flex flex-col gap-3">
+                <div className="flex gap-2">
+                  <input
+                    className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+                    placeholder="Enter your email"
+                    type="email"
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    required
+                  />
+                  <button
+                    className="flex-none rounded-md bg-secondary px-3.5 py-2.5 text-sm font-semibold text-primary shadow-sm hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    type="submit"
+                    disabled={isSubscribing}
+                  >
+                    {isSubscribing ? 'Subscribing...' : 'Subscribe'}
+                  </button>
+                </div>
+                {newsletterStatus === 'success' && (
+                  <p className="text-xs text-green-300">Thanks for subscribing!</p>
+                )}
+                {newsletterStatus === 'error' && (
+                  <p className="text-xs text-red-300">Subscription failed. Try again.</p>
+                )}
               </form>
             </div>
           </div>
@@ -102,11 +162,11 @@ const Footer = () => {
                   <FaLinkedin className="text-xl" />
                 </a>
                 <a
-                  href="https://twitter.com/khandakershahi"
+                  href="https://www.facebook.com/KhandakerShahiOfficial"
                   className="group flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition-all hover:bg-secondary hover:text-primary text-gray-300"
-                  aria-label="Twitter"
+                  aria-label="Facebook"
                 >
-                  <FaTwitter className="text-xl" />
+                  <FaFacebook className="text-xl" />
                 </a>
                 <a
                   href="mailto:hello@khandakershahi.com"

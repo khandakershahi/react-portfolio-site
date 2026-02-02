@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaEnvelope, FaPhone, FaWhatsapp, FaGithub, FaLinkedin, FaTwitter, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaWhatsapp, FaGithub, FaLinkedin, FaFacebook, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -99,7 +99,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: FaGithub, name: 'GitHub', href: 'https://github.com/khandakershahi' },
     { icon: FaLinkedin, name: 'LinkedIn', href: 'https://linkedin.com/in/khandakershahi' },
-    { icon: FaTwitter, name: 'Twitter', href: 'https://twitter.com/khandakershahi' }
+    { icon: FaFacebook, name: 'Facebook', href: 'https://www.facebook.com/KhandakerShahiOfficial' }
   ];
 
   return (
