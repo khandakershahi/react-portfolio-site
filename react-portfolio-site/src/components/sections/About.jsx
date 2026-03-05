@@ -26,7 +26,7 @@ const About = () => {
     },
     {
       title: "Web Developer",
-      company: "FloralDigital, Netherlands",
+      company: "FloralDigital BV, Netherlands",
       period: "2021 - 2022",
       description: [
         "Collaborated with remote teams to build and maintain WordPress-based websites.",
