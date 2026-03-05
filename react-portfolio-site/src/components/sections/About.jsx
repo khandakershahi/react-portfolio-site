@@ -3,36 +3,37 @@ import myPhoto from '../../assets/images/my-photo-gray.jpg';
 const About = () => {
   const experiences = [
     {
-      title: 'Frontend Web Developer',
-      company: 'Freelance',
-      period: '2020 - Present',
+      title: "Web Developer",
+      company: "BloomLocal LTD, UK",
+      period: "2019 - 2023",
       description: [
-        'Developed modern, responsive websites using React, Next.js, and Tailwind CSS for various clients.',
-        'Built custom WordPress themes and plugins with focus on performance and SEO optimization.',
-        'Collaborated with designers and clients to deliver pixel-perfect, user-friendly web applications.'
+        "Developed and maintained WordPress websites for clients across different industries.",
+        "Built responsive layouts and customized themes with focus on performance and usability.",
+        "Worked on website optimization, bug fixing, and feature improvements."
       ]
     },
     {
-      title: 'WordPress Developer',
-      company: 'Web Development Agency',
-      period: '2019 - 2020',
+      title: "Web Developer",
+      company: "FloralDigital, Netherlands",
+      period: "2021 - 2022",
       description: [
-        'Created custom WordPress themes and maintained client websites with focus on performance.',
-        'Implemented responsive designs and ensured cross-browser compatibility.',
-        'Optimized websites for search engines and improved loading speeds by 40%.'
+        "Collaborated with remote teams to build and maintain WordPress-based websites.",
+        "Implemented responsive designs and improved frontend performance.",
+        "Handled updates, debugging, and UI improvements for client projects."
       ]
     },
     {
-      title: 'Junior Frontend Developer',
-      company: 'Local Tech Company',
-      period: '2018 - 2019',
+      title: "Web Developer",
+      company: "Brand North, USA",
+      period: "2024 - Present",
       description: [
-        'Assisted in developing user interfaces using HTML, CSS, and JavaScript.',
-        'Collaborated with senior developers to implement responsive web designs.',
-        'Learned modern frontend frameworks and best practices in web development.'
+        "Working on website maintenance, customization, and performance improvements.",
+        "Assisting with frontend tasks and modern web development tools.",
+        "Supporting development workflow and implementing website updates."
       ]
     }
   ];
+
 
   const education = [
     {
