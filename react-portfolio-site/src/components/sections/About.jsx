@@ -3,6 +3,18 @@ import myPhoto from '../../assets/images/my-photo-gray.jpg';
 const About = () => {
   const experiences = [
     {
+      title: "Jr. IT Officer",
+      company: "Varendra University",
+      period: "2014 - 2018",
+      description: [
+        "Managed and maintained university IT infrastructure including servers, PCs, laptops, and network devices.",
+        "Supported peripheral devices such as CCTV systems, attendance machines, projectors, ID card printers, and photocopiers.",
+        "Provided technical assistance to staff and students, troubleshooting hardware and software issues.",
+        "Ensured smooth operation of IT systems and implemented basic IT policies and procedures."
+      ]
+    
+    },
+    {
       title: "Web Developer",
       company: "BloomLocal LTD, UK",
       period: "2019 - 2023",
@@ -37,16 +49,46 @@ const About = () => {
 
   const education = [
     {
-      degree: 'Self-Taught Frontend Developer',
-      institution: 'Online Learning Platforms',
-      period: '2017 - Present',
-      description: 'Continuously learning through online courses, tutorials, and hands-on projects. Focused on modern web technologies including React, Next.js, and responsive design principles.'
+      degree: "Diploma in Computer Technology",
+      institution: "Rajshahi Polytechnic Institute, Rajshahi",
+      period: "2009 - 2012",
+      description:
+        "Completed Diploma in Engineering in Computer Technology focusing on programming fundamentals, networking, and computer systems."
     },
     {
-      degree: 'Web Development Certification',
-      institution: 'Programming Hero',
-      period: '2018',
-      description: 'Completed comprehensive web development course covering HTML, CSS, JavaScript, React, and modern development practices.'
+      degree: "Secondary School Certificate (SSC)",
+      institution: "Ispahani Public School and College, Comilla",
+      period: "2005",
+      description:
+        "Completed Secondary School Certificate with general education including mathematics, science, and computer basics."
+    },
+    {
+      degree: "Linux Server Administration (LSA)",
+      institution: "ACME IT, Rajshahi",
+      period: "2010",
+      description:
+        "Completed local training on Linux Server Administration."
+    },
+    {
+      degree: "CCNA Training (Local)",
+      institution: "New Horizons, Dhaka",
+      period: "2011",
+      description:
+        "Training focused on networking fundamentals, routing, switching, and network configuration."
+    },
+    {
+      degree: "Web Development",
+      institution: "eShikhon, Dhaka",
+      period: "2019",
+      description:
+        "Completed web development training covering HTML, CSS, basic JavaScript, and WordPress website development."
+    },
+    {
+      degree: "Complete Web Development (MERN)",
+      institution: "Programming Hero",
+      period: "2025",
+      description:
+        "Completed modern web development training covering MongoDB, Express.js, React, and Node.js along with modern JavaScript and frontend development practices."
     }
   ];
 
